@@ -1,0 +1,50 @@
+query Feed($offset: String) {
+	feed(offset: $offset) {
+		links {
+			title
+			thumb
+			comment
+			ctime
+			articleId
+		}
+		matches {
+			id
+			status
+			startTime
+			title
+			teams {
+				name
+				id
+				score
+			}
+		}
+		offset
+	}
+}
+
+query Article($articleId: String) {
+	article(articleId: $articleId) {
+		title
+		info
+		content
+	}
+}
+
+query Record($type: String, $tabKey: String) {
+	record(type: $type, tabKey: $tabKey) {
+		tabs {
+			title
+			key
+		}
+		summary
+		tables {
+			sectionHeaders
+			teams {
+				id
+				name
+				playoff_desc
+				data
+			}
+		}
+	}
+}

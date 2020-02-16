@@ -1,0 +1,66 @@
+type Query {
+	feed(offset: String): Feed!
+	article(articleId: String): Article!
+	record(type: String, tabKey: String): Record!
+}
+
+type Mutation {
+	post(url: String!, description: String!): Link!
+}
+
+type Feed {
+	links: [Link!]!
+	matches: [Match!]!
+	offset: String!
+}
+
+type Match {
+	id: String!
+	status: String!
+	startTime: String!
+	title: String!
+	teams: [Team!]!
+}
+
+type Team {
+	name: String!
+	id: ID!
+	score: String
+}
+
+type Link {
+	articleId: String!
+	thumb: String!
+	title: String!
+	ctime: String!
+	comment: String!
+}
+
+type Article {
+	title: String!
+	info: String!
+	content: String!
+}
+
+type Tab {
+	title: String!
+	key: String!
+}
+
+type Table {
+	sectionHeaders: [String!]!
+	teams: [TeamData!]!
+}
+
+type TeamData {
+	id: String!
+	name: String!
+	playoff_desc: String!
+	data: [String!]!
+}
+
+type Record {
+	tabs: [Tab!]
+	summary: String
+	tables: [Table!]
+}
