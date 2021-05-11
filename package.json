@@ -23,7 +23,7 @@
 		"graphql-tag": "^2.10.1",
 		"isomorphic-unfetch": "^3.0.0",
 		"lib-flexible": "^0.3.2",
-		"lodash": "^4.17.15",
+		"lodash": "^4.17.21",
 		"mobx": "^5.15.4",
 		"mobx-react-lite": "^1.5.2",
 		"next": "^9.2.0",
