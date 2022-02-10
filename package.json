@@ -52,7 +52,7 @@
 		"@types/node": "^13.5.0",
 		"@types/parse5": "^5.0.2",
 		"@types/react": "^16.9.19",
-		"node-sass": "^4.13.1",
+		"node-sass": "^7.0.0",
 		"postcss-loader": "^3.0.0",
 		"postcss-preset-env": "^6.7.0",
 		"styled-jsx-plugin-sass": "^1.0.0",
